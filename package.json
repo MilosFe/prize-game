@@ -4,18 +4,19 @@
     "description": "wheater app",
     "main": "index.js",
     "scripts": {
-        "test": "test"
+        "test": "test",
+        "start": "node index.js"
     },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/TensaZangetsu/Doctrine.git"
+        "type": "git"
+
     },
     "author": "Radoman Milos",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/TensaZangetsu/Doctrine/issues"
+
     },
-    "homepage": "https://github.com/TensaZangetsu/Doctrine#readme",
+    "homepage": "https://github.com/TensaZangetsu/Vinovera#readme",
     "devDependencies": {
         "browser-sync": "^2.18.12",
         "del": "^3.0.0",
