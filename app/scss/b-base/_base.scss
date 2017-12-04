@@ -1,0 +1,61 @@
+@import '_vars.scss';
+@import '_mixins.scss';
+@import '_typography.scss';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1em;
+    height: 100%;
+}
+
+body {
+    background-color: $grey;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: $grey-text;
+    background: red;
+    height: 100%;
+    margin: 0;
+    background: -moz-linear-gradient(144deg, rgba(171, 212, 226, 1) 0%, rgba(247, 244, 214, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(247, 244, 214, 1)), color-stop(100%, rgba(171, 212, 226, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(144deg, rgba(171, 212, 226, 1) 0%, rgba(247, 244, 214, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(144deg, rgba(171, 212, 226, 1) 0%, rgba(247, 244, 214, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(144deg, rgba(171, 212, 226, 1) 0%, rgba(247, 244, 214, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(306deg, rgba(171, 212, 226, 1) 0%, rgba(247, 244, 214, 1) 100%);
+    /* w3c */
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f7f4d6', endColorstr='#abd4e2', GradientType=1);
+    /* ie6-9 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Old browsers */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+// img {
+//     width: 100%;
+//     height: auto;
+//     max-width: 100%;
+//     display: block;
+// }
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}

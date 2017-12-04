@@ -1,0 +1,130 @@
+// @media (min-width: 48em) {
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .weather_form {
+//         width: 60%;
+//     }
+//     h1 {
+//         font-size: 2.441em;
+//     }
+//     h2 {
+//         font-size: 1.953em;
+//     }
+//     h3 {
+//         font-size: 1.563em;
+//     }
+//     h4 {
+//         font-size: 1.25em;
+//     }
+//     .display-1 {
+//         font-size: 6em;
+//     }
+//     .display-2 {
+//         font-size: 5.5em;
+//     }
+//     .display-3 {
+//         font-size: 4.5em;
+//     }
+//     .display-4 {
+//         font-size: 3.5em;
+//     }
+// }
+// // Large devices (desktops, 62em and up)
+// @media (min-width: 62em) {
+//     html,
+//     body {
+//         font-size: 16px;
+//     }
+// }
+// // Extra large devices (large desktops, 75em and up)
+// @media (min-width: 75em) {
+//     html,
+//     body {
+//         font-size: 16px;
+//     }
+//     #header-top {
+//         margin-top: 4rem;
+//     }
+//     .weather_form {
+//         margin-top: 100px;
+//         max-width: 515px;
+//         padding: 46px 36px;
+//     }
+//     h1 {
+//         font-size: 1.5rem;
+//     }
+// }
+@media (min-width:920px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #header-top {
+        padding: 66px 0 100px 0;
+    }
+    .weather_form {
+        width: 515px;
+        //enable to large
+        border: 2px solid #fff;
+        border-radius: 8px;
+        position: relative;
+        padding: 48px 50px;
+        box-sizing: border-box;
+    }
+    h1.app-title {
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+        padding-top: 22px;
+        margin-bottom: 22px;
+    }
+    .weathercards {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        max-width: 860px;
+        width: 100%;
+        margin-top: 52px;
+        justify-content: flex-start;
+        &__card {
+            margin-right: 10px;
+            width: 275px;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            &>.city {
+                font-size: 18px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex: 0 0 90%;
+                text-align: right;
+                float: right;
+            }
+            &__icon {
+                position: relative;
+                width: 50%;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .temp {
+        color: #fff;
+        flex-grow: 1;
+        text-align: center;
+        &__value {
+            display: inline-block;
+            font-size: 72px;
+            line-height: 1;
+            vertical-align: text-top;
+        }
+        &__degrees {
+            display: inline-block;
+            font-size: 12px;
+        }
+    }
+}

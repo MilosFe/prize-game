@@ -1,0 +1,58 @@
+.weathercards {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 256px;
+    &__card {
+        border-radius: 4px;
+        padding: 7px;
+        margin-top: 16px;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        &>.city {
+            font-size: 14px;
+            color: #fff;
+            flex: 0 1 100%;
+        }
+        &__icon {
+            height: 50px;
+            width: 50%;
+            img {
+                width: 70%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__close {
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+        }
+        //mods
+        &--orange {
+            background: #e98143;
+        }
+        &--blue {
+            background: #6fd7f5;
+        }
+        &--red {
+            background: #e4b262
+        }
+    }
+}
+
+.temp {
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+    &__value {
+        display: inline-block;
+        font-size: 72px;
+        line-height: 1;
+        vertical-align: text-top;
+    }
+    &__degrees {
+        display: inline-block;
+        font-size: 12px;
+    }
+}
