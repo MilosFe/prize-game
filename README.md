@@ -1,4 +1,5 @@
 # Doctrine
-DoctrineApp only for presenation
+DoctrineApp 
+
 # Working Demo
 http://doctrine-test.herokuapp.com/
