@@ -10,7 +10,7 @@ var app = (function(global, toastr, $) {
     'use strict';
 
     function getCityWheater(City) {
-        var url = "http://api.apixu.com/v1/current.json?key=cc1b41f849084ab9a1e173908170112&q=" + City;
+        var url = "https://api.apixu.com/v1/current.json?key=cc1b41f849084ab9a1e173908170112&q=" + City;
         $.getJSON(url)
             .done(function(data) {
                 createCard(data);
