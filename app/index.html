@@ -17,10 +17,12 @@
     <link rel="shortcut icon" type="image/png" href="images/logo.png" />
     <link rel="apple-touch-icon" href="images/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
+    <base href="https://www.matchabout.com/prizegame/" target="_blank">
 </head>
 
 
@@ -34,20 +36,17 @@
         </div>
     </header>
 
-
-
-
     <section class="prize-game">
         <div class="container">
-            <h1>Prize Game</h1>
+            <h1>Who will be the winer???</h1>
             <div class="roulette" style="display:none;">
-
-
             </div>
-
     </section>
-
-
+    <section>
+        <div class="container">
+            <img src="images/Saint_Patrick's_Day_Leprechaun_with_Pot_of_Gold_and_Shamrock_PNG_Clipart.png" alt="logo" id="quesntiomark">
+        </div>
+    </section>
     <section class="winner container">
         <div class="profile">
             <div class="photo">
@@ -60,9 +59,7 @@
                 </div>
             </div>
             <div class="box">
-
             </div>
-
         </div>
     </section>
 
@@ -70,10 +67,9 @@
 
     <!--build:js js/main.min.js -->
     <script src="/js/vendor/jquery.min.js"></script>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="js/vendor/toastr.min.js"></script>
-    <script src="js/vendor/roullete.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/vendor/toastr.min.js"></script>
+    <script src="/js/vendor/roullete.js"></script>
+    <script src="/js/main.js"></script>
 
 
     <!-- endbuild -->

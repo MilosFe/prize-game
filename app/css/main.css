@@ -592,7 +592,7 @@ a .wrapper {
           transition-delay: 0.4s; }
 
 .prize-game {
-  padding-top: 50px; }
+  padding-top: 20px; }
 
 .roulete {
   width: 200px;
@@ -705,6 +705,10 @@ body .card {
         transition-property: all;
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s; }
+
+#quesntiomark {
+  width: 40%;
+  margin: 0 auto; }
 
 @media (min-width: 920px) {
   .container {

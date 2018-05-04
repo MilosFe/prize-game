@@ -56,10 +56,7 @@
 			p.maxDistance += p.imageHeight - p.topPosition % p.imageHeight;
 			if (p.stopImageNumber != null) {
 				p.maxDistance +=
-					(p.totalHeight -
-						p.maxDistance % p.totalHeight +
-						p.stopImageNumber * p.imageHeight) %
-					p.totalHeight;
+					(p.totalHeight - p.maxDistance % p.totalHeight + p.stopImageNumber * p.imageHeight) % p.totalHeight;
 			}
 		};
 
@@ -74,20 +71,14 @@
 					p.isRunUp = false;
 				}
 			} else if (p.isSlowdown) {
-				var rate_ = ~~(
-					(p.maxDistance - p.distance) /
-					(p.maxDistance - p.slowDownStartDistance) *
-					p.speed
-				);
+				var rate_ = ~~((p.maxDistance - p.distance) / (p.maxDistance - p.slowDownStartDistance) * p.speed);
 				speed_ = rate_ + 1;
 			}
 
 			if (p.maxDistance && p.distance >= p.maxDistance) {
 				p.isStop = true;
 				reset();
-				p.stopCallback(
-					p.$rouletteTarget.find('img').eq(p.stopImageNumber)
-				);
+				p.stopCallback(p.$rouletteTarget.find('img').eq(p.stopImageNumber));
 				return;
 			}
 			p.distance += speed_;
@@ -100,10 +91,7 @@
 				p.$rouletteTarget.css('top', '-' + p.topPosition + 'px');
 			} else {
 				// TODO more smooth roll
-				p.$rouletteTarget.css(
-					'transform',
-					'translate(0px, -' + p.topPosition + 'px)'
-				);
+				p.$rouletteTarget.css('transform', 'translate(0px, -' + p.topPosition + 'px)');
 			}
 			setTimeout(roll, 1);
 		};
@@ -126,8 +114,7 @@
 						if (this.complete || this.complete === undefined) {
 							var src = this.src;
 							// set BLANK image
-							this.src =
-								'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+							this.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 							this.src = src;
 						}
 					});
@@ -171,14 +158,12 @@
 			if (!p.isSlowdown) {
 				if (option) {
 					var stopImageNumber = Number(option.stopImageNumber);
-					if (
-						0 <= stopImageNumber &&
-						stopImageNumber <= p.imageCount - 1
-					) {
+					if (0 <= stopImageNumber && stopImageNumber <= p.imageCount - 1) {
 						p.stopImageNumber = option.stopImageNumber;
 					}
 				}
 				slowDownSetup();
+				reset();
 			}
 		};
 		var option = function(options) {
@@ -194,6 +179,7 @@
 			stop: stop,
 			init: init,
 			option: option,
+			reset: reset,
 		};
 		return ret;
 	};
@@ -208,12 +194,7 @@
 				if (roulette[method]) {
 					roulette[method](options);
 				} else {
-					console &&
-						console.error(
-							'Method ' +
-								method +
-								' does not exist on jQuery.roulette'
-						);
+					console && console.error('Method ' + method + ' does not exist on jQuery.roulette');
 				}
 			} else {
 				roulette = new Roulette(method);
